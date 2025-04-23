@@ -44,6 +44,7 @@
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(146, 20);
             this.checkBox2.TabIndex = 0;
+            this.checkBox2.Tag = "MatchWholeWord";
             this.checkBox2.Text = "Збіг повного слов";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -54,6 +55,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(185, 20);
             this.checkBox1.TabIndex = 1;
+            this.checkBox1.Tag = "MatchCase";
             this.checkBox1.Text = "З урахуванням регістру";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -68,8 +70,9 @@
             // 
             this.buttonOk.Location = new System.Drawing.Point(405, 39);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(127, 23);
             this.buttonOk.TabIndex = 3;
+            this.buttonOk.Tag = "Ok";
             this.buttonOk.Text = "Ок";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
@@ -78,8 +81,9 @@
             // 
             this.buttonClose.Location = new System.Drawing.Point(405, 87);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.Size = new System.Drawing.Size(127, 23);
             this.buttonClose.TabIndex = 4;
+            this.buttonClose.Tag = "Close";
             this.buttonClose.Text = "Закрити";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -90,6 +94,7 @@
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(147, 36);
             this.Next.TabIndex = 5;
+            this.Next.Tag = "Next";
             this.Next.Text = "Наступний";
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
@@ -100,6 +105,7 @@
             this.Prev.Name = "Prev";
             this.Prev.Size = new System.Drawing.Size(147, 36);
             this.Prev.TabIndex = 6;
+            this.Prev.Tag = "Previous";
             this.Prev.Text = "Попередній";
             this.Prev.UseVisualStyleBackColor = true;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
@@ -108,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 224);
+            this.ClientSize = new System.Drawing.Size(562, 224);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.buttonClose);
@@ -117,6 +123,7 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.checkBox2);
             this.Name = "Form3";
+            this.Tag = "SearchForm";
             this.Text = "Знайти";
             this.ResumeLayout(false);
             this.PerformLayout();

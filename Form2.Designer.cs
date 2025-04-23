@@ -39,6 +39,8 @@
             this.Кількість = new System.Windows.Forms.StatusStrip();
             this.sbAmount = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.contextMenuStrip1.SuspendLayout();
             this.Кількість.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +108,8 @@
             this.Кількість.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Кількість.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sbAmount,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel1,
             this.sbTime});
             this.Кількість.Location = new System.Drawing.Point(0, 424);
             this.Кількість.Name = "Кількість";
@@ -117,13 +121,30 @@
             // 
             this.sbAmount.Name = "sbAmount";
             this.sbAmount.Size = new System.Drawing.Size(145, 20);
+            this.sbAmount.Tag = "Numberofcharacters";
             this.sbAmount.Text = "Кількість символів: ";
             // 
             // sbTime
             // 
             this.sbTime.Name = "sbTime";
             this.sbTime.Size = new System.Drawing.Size(38, 20);
+            this.sbTime.Tag = "";
             this.sbTime.Text = "Час ";
+            this.sbTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripStatusLabel1.Tag = "Time";
+            this.toolStripStatusLabel1.Text = "Час:";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel2.Text = "             ";
             // 
             // Form2
             // 
@@ -154,5 +175,7 @@
         private System.Windows.Forms.ToolStripMenuItem виділитиВсеToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel sbTime;
         private System.Windows.Forms.ToolStripStatusLabel sbAmount;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }

@@ -52,6 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 43);
             this.button1.TabIndex = 1;
+            this.button1.Tag = "Ok";
             this.button1.Text = "Ок";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -63,6 +64,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 32);
             this.label1.TabIndex = 2;
+            this.label1.Tag = "Rights";
             this.label1.Text = "© 2025 Білоцерківська Анна.\r\nУсі права захищено";
             // 
             // linkLabel1
@@ -86,7 +88,9 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form4";
-            this.Text = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "AboutProgram";
+            this.Text = "Про програму";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

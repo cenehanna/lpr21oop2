@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using static lpr21oop2.Form1;
 
 namespace lpr21oop2
 
 {
- 
+
     public partial class Form2 : Form
     {
         private List<int> foundIndexes = new List<int>();
         private int currentIndex = -1;
-        // Переменная для отслеживания сохранения документа
         public bool IsSaved = false;
         public string DocName = "Документ";
         private System.Windows.Forms.Timer timer;
@@ -29,24 +26,38 @@ namespace lpr21oop2
 
 
 
+
         public Form2()
         {
             InitializeComponent();
             UpdateTime();
-          
 
 
-            // Налаштування таймера
+
             timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000; // Оновлення кожну секунду
-            timer.Tick += Timer_Tick;
+            timer.Interval = 1000; timer.Tick += Timer_Tick;
             timer.Start();
 
-            // Інші ініціалізації...
             sbAmount.Text = "Кількість символів: " + richTextBox1.Text.Length.ToString();
+
+            LanguageManager.LanguageChanged += (s, e) => UpdateFormLanguage();
+
+            UpdateFormLanguage();
+
         }
 
 
+        private void UpdateFormLanguage()
+        {
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is ToolStrip toolStrip)
+                {
+                    LanguageManager.UpdateToolStripItems(toolStrip.Items);
+                }
+            }
+        }
 
         private void UpdateTime()
         {
@@ -72,7 +83,6 @@ namespace lpr21oop2
             int start = 0;
             while (start < richTextBox1.TextLength)
             {
-                // Використовуємо правильне перевантаження методу Find
                 int index = richTextBox1.Find(searchText, start, richTextBox1.TextLength, options);
                 if (index == -1)
                     break;
@@ -95,15 +105,12 @@ namespace lpr21oop2
 
         private void HighlightFound(int index, int length)
         {
-            // Знімаємо попереднє виділення
             richTextBox1.SelectAll();
             richTextBox1.SelectionBackColor = richTextBox1.BackColor;
             richTextBox1.SelectionColor = richTextBox1.ForeColor;
 
-            // Виділяємо знайдений текст
             richTextBox1.Select(foundIndexes[index], length);
-            richTextBox1.SelectionBackColor = Color.Yellow;  // або будь-який інший колір
-            richTextBox1.SelectionColor = Color.Black;
+            richTextBox1.SelectionBackColor = Color.Yellow; richTextBox1.SelectionColor = Color.Black;
 
             richTextBox1.ScrollToCaret();
             richTextBox1.Focus();
@@ -139,38 +146,32 @@ namespace lpr21oop2
             HighlightFound(currentIndex, searchText.Length);
         }
 
-        
-        // Обработчик события "Вырезать"
+
         private void вирізатиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Cut();
         }
 
-        // Обработчик события "Копировать"
         private void копіюватиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Copy();
         }
 
-        // Обработчик события "Вставить"
         private void вставитиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Paste();
         }
 
-        // Обработчик события "Удалить"
         private void видалитиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectedText = "";
         }
 
-        // Обработчик события "Выделить все"
         private void виділитиВсеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectAll();
         }
 
-        // Обработчик события "Сохранить"
         private void mnuSave_Click(object sender, EventArgs e)
         {
             string filePath = this.Tag?.ToString();
@@ -185,8 +186,7 @@ namespace lpr21oop2
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     filePath = sfd.FileName;
-                    SavedFileName = filePath; // Зберігаємо шлях до файлу
-
+                    SavedFileName = filePath;
                     if (Path.GetExtension(filePath).ToLower() == ".rtf")
                         richTextBox1.SaveFile(filePath);
                     else
@@ -196,7 +196,7 @@ namespace lpr21oop2
                     this.DocName = Path.GetFileName(filePath);
                     this.Text = this.DocName;
                     IsSaved = true;
-                    isTextChanged = false; // Скидаємо прапорець змін
+                    isTextChanged = false;
                 }
             }
             else
@@ -207,12 +207,11 @@ namespace lpr21oop2
                     File.WriteAllText(filePath, richTextBox1.Text);
 
                 IsSaved = true;
-                isTextChanged = false; // Скидаємо прапорець змін
+                isTextChanged = false;
             }
         }
 
 
-        // Обработчик события "Сохранить как"
         private void mnuSaveAs_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog
@@ -221,13 +220,11 @@ namespace lpr21oop2
             };
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                // Сохраняем файл по новому пути и помечаем как сохранённый
                 if (Path.GetExtension(sfd.FileName).ToLower() == ".rtf")
                     richTextBox1.SaveFile(sfd.FileName);
                 else
                     File.WriteAllText(sfd.FileName, richTextBox1.Text);
 
-                // Обновляем имя документа и его состояние
                 this.Tag = sfd.FileName;
                 this.DocName = Path.GetFileName(sfd.FileName);
                 IsSaved = true;
@@ -235,15 +232,11 @@ namespace lpr21oop2
             }
         }
 
-        // Обработчик события закрытия формы
-        // Обробник події закриття форми
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Визначаємо ім'я файлу для відображення
             string fileNameToShow = !string.IsNullOrEmpty(SavedFileName)
-                ? Path.GetFileName(SavedFileName)
-                : this.Text; // Якщо файл не зберігався, беремо заголовок форми
-
+    ? Path.GetFileName(SavedFileName)
+    : this.Text;
             if (isTextChanged && !IsSaved)
             {
                 var result = MessageBox.Show(
@@ -257,7 +250,6 @@ namespace lpr21oop2
                 {
                     mnuSave_Click(sender, e);
 
-                    // Якщо користувач скасував збереження, відміняємо закриття
                     if (!IsSaved)
                     {
                         e.Cancel = true;
@@ -275,17 +267,14 @@ namespace lpr21oop2
 
         private void HighlightSyntax(RichTextBox rtb)
         {
-            // Зберігаємо позицію курсора
             int selectionStart = rtb.SelectionStart;
             int selectionLength = rtb.SelectionLength;
 
             rtb.SuspendLayout();
 
-            // Встановлюємо весь текст у чорний
             rtb.SelectAll();
             rtb.SelectionColor = Color.Black;
 
-            // 🔷 Ключові слова
             string[] keywords = {
         "if", "else", "while", "for", "foreach", "return", "break", "continue",
         "switch", "case", "default", "do", "try", "catch", "finally", "throw",
@@ -293,15 +282,12 @@ namespace lpr21oop2
         "using", "this", "base", "override", "virtual", "abstract", "sealed", "readonly", "const"
     };
 
-            // 🟣 Типи даних
             string[] types = {
         "int", "string", "bool", "float", "double", "decimal", "char", "object", "var", "long", "short"
     };
 
-            // 🟠 Літерали
             string[] literals = { "true", "false", "null" };
 
-            // 🔶 Коментарі
             MatchCollection comments = Regex.Matches(rtb.Text, @"//.*?$", RegexOptions.Multiline);
             foreach (Match match in comments)
             {
@@ -309,7 +295,6 @@ namespace lpr21oop2
                 rtb.SelectionColor = Color.Green;
             }
 
-            // 🔵 Рядки в лапках
             MatchCollection strings = Regex.Matches(rtb.Text, "\".*?\"");
             foreach (Match match in strings)
             {
@@ -317,7 +302,6 @@ namespace lpr21oop2
                 rtb.SelectionColor = Color.Brown;
             }
 
-            // 🔷 Ключові слова
             foreach (string keyword in keywords)
             {
                 MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{keyword}\b");
@@ -328,7 +312,6 @@ namespace lpr21oop2
                 }
             }
 
-            // 🟣 Типи
             foreach (string type in types)
             {
                 MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{type}\b");
@@ -339,7 +322,6 @@ namespace lpr21oop2
                 }
             }
 
-            // 🟠 Літерали
             foreach (string literal in literals)
             {
                 MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{literal}\b");
@@ -350,7 +332,6 @@ namespace lpr21oop2
                 }
             }
 
-            // Відновлюємо попереднє виділення
             rtb.Select(selectionStart, selectionLength);
             rtb.SelectionColor = Color.Black;
 
@@ -364,15 +345,13 @@ namespace lpr21oop2
                 isTextChanged = true;
                 IsSaved = false;
 
-                // Зберігаємо стан для Undo/Redo
                 undoStack.Push(richTextBox1.Rtf);
                 redoStack.Clear();
             }
 
             sbAmount.Text = "Кількість символів: " + richTextBox1.Text.Length.ToString();
 
-            // Викликаємо підсвічування синтаксису, якщо потрібно
-             HighlightSyntax(richTextBox1); 
+            HighlightSyntax(richTextBox1);
         }
         public void Undo()
         {
@@ -382,10 +361,8 @@ namespace lpr21oop2
                 {
                     isUndoRedoOperation = true;
 
-                    // Зберігаємо поточний стан для redo
                     redoStack.Push(richTextBox1.Rtf);
 
-                    // Відновлюємо попередній стан
                     richTextBox1.Rtf = undoStack.Pop();
                 }
                 finally
@@ -408,10 +385,8 @@ namespace lpr21oop2
                 {
                     isUndoRedoOperation = true;
 
-                    // Зберігаємо поточний стан для undo
                     undoStack.Push(richTextBox1.Rtf);
 
-                    // Відновлюємо наступний стан
                     richTextBox1.Rtf = redoStack.Pop();
                 }
                 finally
@@ -431,16 +406,12 @@ namespace lpr21oop2
     {
         public static void InsertImage(this RichTextBox richTextBox, Image image)
         {
-            // Зберігаємо поточну позицію курсора
             int position = richTextBox.SelectionStart;
 
-            // Копіюємо зображення в буфер обміну
             Clipboard.SetImage(image);
 
-            // Вставляємо з буфера
             richTextBox.Paste();
 
-            // Відновлюємо позицію курсора після вставки
             richTextBox.SelectionStart = position + 1;
             richTextBox.ScrollToCaret();
         }

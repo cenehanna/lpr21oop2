@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Resources;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
 
 
@@ -14,7 +9,7 @@ namespace lpr21oop2
 {
     public partial class Form1 : Form
     {
-       
+
 
 
 
@@ -23,10 +18,10 @@ namespace lpr21oop2
 
             InitializeComponent();
 
-            // Гарячі клавіші
             новийToolStripMenuItem1.ShortcutKeys = Keys.Control | Keys.N;
             відкритиToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
             зберегтиToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
+            зберегтиЯкToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.S;
             вихідToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.F4;
 
             вирізатиToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.X;
@@ -42,7 +37,7 @@ namespace lpr21oop2
 
         public static int documentCounter = 0;
 
-       
+
 
         private void відкритиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -55,7 +50,6 @@ namespace lpr21oop2
                 Form2 newChild = new Form2();
                 newChild.MdiParent = this;
 
-                // Відображаємо повний шлях до файлу в назві вкладки
                 newChild.Text = ofd.FileName;
 
                 newChild.Show();
@@ -71,9 +65,8 @@ namespace lpr21oop2
         {
             if (ActiveMdiChild is Form2 child)
             {
-                if (child.Tag != null && !string.IsNullOrEmpty(child.Tag.ToString())) // Якщо файл уже збережений
+                if (child.Tag != null && !string.IsNullOrEmpty(child.Tag.ToString()))
                 {
-                    // Зберегти файл без діалогу (вже є шлях)
                     if (Path.GetExtension(child.Tag.ToString()).ToLower() == ".rtf")
                         child.richTextBox1.SaveFile(child.Tag.ToString());
                     else
@@ -81,20 +74,17 @@ namespace lpr21oop2
                 }
                 else
                 {
-                    // Якщо файл ще не збережений, викликаємо SaveFileDialog
                     SaveFileDialog sfd = new SaveFileDialog
                     {
                         Filter = "RTF файли (*.rtf)|*.rtf|Текстові файли (*.txt)|*.txt"
                     };
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
-                        // Зберегти за новим шляхом
                         if (Path.GetExtension(sfd.FileName).ToLower() == ".rtf")
                             child.richTextBox1.SaveFile(sfd.FileName);
                         else
                             File.WriteAllText(sfd.FileName, child.richTextBox1.Text);
 
-                        // Зберегти шлях до файлу в Tag
                         child.Tag = sfd.FileName;
                         child.Text = sfd.FileName;
                     }
@@ -106,20 +96,17 @@ namespace lpr21oop2
         {
             if (ActiveMdiChild is Form2 child)
             {
-                // Викликаємо SaveFileDialog для збереження з новим шляхом
                 SaveFileDialog sfd = new SaveFileDialog
                 {
                     Filter = "RTF файли (*.rtf)|*.rtf|Текстові файли (*.txt)|*.txt"
                 };
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    // Зберегти за новим шляхом
                     if (Path.GetExtension(sfd.FileName).ToLower() == ".rtf")
                         child.richTextBox1.SaveFile(sfd.FileName);
                     else
                         File.WriteAllText(sfd.FileName, child.richTextBox1.Text);
 
-                    // Зберегти шлях до файлу в Tag
                     child.Tag = sfd.FileName;
                     child.Text = sfd.FileName;
                 }
@@ -209,7 +196,6 @@ namespace lpr21oop2
             Form3 frm = new Form3();
             frm.ShowDialog(this);
 
-            // Не потрібно явно викликати FindAll тут, це робиться в Form3 при натисканні OK
         }
 
         private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
@@ -222,7 +208,7 @@ namespace lpr21oop2
 
 
 
-       
+
 
         private void tsNew_Click(object sender, EventArgs e)
         {
@@ -230,13 +216,12 @@ namespace lpr21oop2
             newChild.MdiParent = this;
             documentCounter++;
             newChild.Text = "Документ " + documentCounter;
-            
+
             newChild.Show();
         }
 
         private void tsOpen_Click(object sender, EventArgs e)
         {
-            // Відкриття існуючого документу
             OpenFileDialog ofd = new OpenFileDialog
             {
                 Filter = "RTF файли (*.rtf)|*.rtf|Текстові файли (*.txt)|*.txt|Всі файли (*.*)|*.*"
@@ -258,12 +243,10 @@ namespace lpr21oop2
 
         private void tsSave_Click(object sender, EventArgs e)
         {
-            // Збереження документу
             if (ActiveMdiChild is Form2 child)
             {
                 if (child.Tag != null && !string.IsNullOrEmpty(child.Tag.ToString()))
                 {
-                    // Якщо файл вже зберігався раніше
                     if (Path.GetExtension(child.Tag.ToString()).ToLower() == ".rtf")
                         child.richTextBox1.SaveFile(child.Tag.ToString());
                     else
@@ -271,7 +254,6 @@ namespace lpr21oop2
                 }
                 else
                 {
-                    // Якщо файл ще не зберігався
                     SaveFileDialog sfd = new SaveFileDialog
                     {
                         Filter = "RTF файли (*.rtf)|*.rtf|Текстові файли (*.txt)|*.txt"
@@ -293,7 +275,6 @@ namespace lpr21oop2
 
         private void tsCut_Click(object sender, EventArgs e)
         {
-            // Вирізати текст
             if (ActiveMdiChild is Form2 child)
             {
                 child.richTextBox1.Cut();
@@ -302,7 +283,6 @@ namespace lpr21oop2
 
         private void tsCopy_Click(object sender, EventArgs e)
         {
-            // Копіювати текст
             if (ActiveMdiChild is Form2 child)
             {
                 child.richTextBox1.Copy();
@@ -311,13 +291,12 @@ namespace lpr21oop2
 
         private void tsPaste_Click(object sender, EventArgs e)
         {
-            // Вставити текст
             if (ActiveMdiChild is Form2 child)
             {
                 child.richTextBox1.Paste();
             }
         }
-         private void SetAlignment(HorizontalAlignment alignment)
+        private void SetAlignment(HorizontalAlignment alignment)
         {
             if (ActiveMdiChild is Form2 child)
             {
@@ -358,10 +337,8 @@ namespace lpr21oop2
                     {
                         try
                         {
-                            // Завантажуємо зображення
                             Image image = Image.FromFile(openFileDialog.FileName);
 
-                            // Вставляємо в RichTextBox
                             child.richTextBox1.InsertImage(image);
                         }
                         catch (Exception ex)
@@ -395,26 +372,62 @@ namespace lpr21oop2
         private void Center_Click(object sender, EventArgs e) => SetAlignment(HorizontalAlignment.Center);
 
         private void Right_Click(object sender, EventArgs e) => SetAlignment(HorizontalAlignment.Right);
-      
+
 
         private void новийToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form2 newChild = new Form2();
             newChild.MdiParent = this;
             documentCounter++;
-            newChild.Text = "Документ " + documentCounter;
-            
+
+            string localizedDocumentName = LanguageManager.GetString("DocumentTitle");
+            if (string.IsNullOrEmpty(localizedDocumentName))
+            {
+                localizedDocumentName = "Документ";
+            }
+
+            newChild.Text = $"{localizedDocumentName} {documentCounter}";
             newChild.Show();
         }
 
         private void українськаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            LanguageManager.CurrentCulture = new CultureInfo("uk-UA");
+            UpdateMenuLanguageSelection();
         }
 
         private void англійськаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            LanguageManager.CurrentCulture = new CultureInfo("en-US");
+            UpdateMenuLanguageSelection();
+        }
+
+        private void UpdateMenuLanguageSelection()
+        {
+            українськаToolStripMenuItem.Checked = false;
+            англійськаToolStripMenuItem.Checked = false;
+
+            switch (LanguageManager.CurrentCulture.Name)
+            {
+                case "uk-UA":
+                    українськаToolStripMenuItem.Checked = true;
+                    break;
+                case "en-US":
+                    англійськаToolStripMenuItem.Checked = true;
+                    break;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            LanguageManager.LanguageChanged += (s, args) =>
+{
+    LanguageManager.UpdateFormLanguage(this);
+};
+
+            LanguageManager.UpdateFormLanguage(this);
+            UpdateMenuLanguageSelection();
         }
     }
 }

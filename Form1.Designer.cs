@@ -109,35 +109,41 @@
             this.вихідToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             resources.ApplyResources(this.файлToolStripMenuItem, "файлToolStripMenuItem");
+            this.файлToolStripMenuItem.Tag = "FileMenu";
             // 
             // новийToolStripMenuItem1
             // 
             this.новийToolStripMenuItem1.Name = "новийToolStripMenuItem1";
             resources.ApplyResources(this.новийToolStripMenuItem1, "новийToolStripMenuItem1");
+            this.новийToolStripMenuItem1.Tag = "NewMenu";
             this.новийToolStripMenuItem1.Click += new System.EventHandler(this.новийToolStripMenuItem1_Click);
             // 
             // відкритиToolStripMenuItem
             // 
             this.відкритиToolStripMenuItem.Name = "відкритиToolStripMenuItem";
             resources.ApplyResources(this.відкритиToolStripMenuItem, "відкритиToolStripMenuItem");
+            this.відкритиToolStripMenuItem.Tag = "OpenMenu";
             this.відкритиToolStripMenuItem.Click += new System.EventHandler(this.відкритиToolStripMenuItem_Click);
             // 
             // зберегтиЯкToolStripMenuItem
             // 
             this.зберегтиЯкToolStripMenuItem.Name = "зберегтиЯкToolStripMenuItem";
             resources.ApplyResources(this.зберегтиЯкToolStripMenuItem, "зберегтиЯкToolStripMenuItem");
+            this.зберегтиЯкToolStripMenuItem.Tag = "SaveAsMenu";
             this.зберегтиЯкToolStripMenuItem.Click += new System.EventHandler(this.зберегтиЯкToolStripMenuItem_Click);
             // 
             // зберегтиToolStripMenuItem
             // 
             this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
             resources.ApplyResources(this.зберегтиToolStripMenuItem, "зберегтиToolStripMenuItem");
+            this.зберегтиToolStripMenuItem.Tag = "SaveMenu";
             this.зберегтиToolStripMenuItem.Click += new System.EventHandler(this.зберегтиToolStripMenuItem_Click);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
             resources.ApplyResources(this.вихідToolStripMenuItem, "вихідToolStripMenuItem");
+            this.вихідToolStripMenuItem.Tag = "ExitMenu";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // редагуванняToolStripMenuItem
@@ -150,35 +156,41 @@
             this.виділитиВсеToolStripMenuItem});
             this.редагуванняToolStripMenuItem.Name = "редагуванняToolStripMenuItem";
             resources.ApplyResources(this.редагуванняToolStripMenuItem, "редагуванняToolStripMenuItem");
+            this.редагуванняToolStripMenuItem.Tag = "EditMenu";
             // 
             // вирізатиToolStripMenuItem
             // 
             this.вирізатиToolStripMenuItem.Name = "вирізатиToolStripMenuItem";
             resources.ApplyResources(this.вирізатиToolStripMenuItem, "вирізатиToolStripMenuItem");
+            this.вирізатиToolStripMenuItem.Tag = "CutMenu";
             this.вирізатиToolStripMenuItem.Click += new System.EventHandler(this.вирізатиToolStripMenuItem_Click);
             // 
             // копіюватиToolStripMenuItem
             // 
             this.копіюватиToolStripMenuItem.Name = "копіюватиToolStripMenuItem";
             resources.ApplyResources(this.копіюватиToolStripMenuItem, "копіюватиToolStripMenuItem");
+            this.копіюватиToolStripMenuItem.Tag = "CopyMenu";
             this.копіюватиToolStripMenuItem.Click += new System.EventHandler(this.копіюватиєєToolStripMenuItem_Click);
             // 
             // вставитиToolStripMenuItem
             // 
             this.вставитиToolStripMenuItem.Name = "вставитиToolStripMenuItem";
             resources.ApplyResources(this.вставитиToolStripMenuItem, "вставитиToolStripMenuItem");
+            this.вставитиToolStripMenuItem.Tag = "PasteMenu";
             this.вставитиToolStripMenuItem.Click += new System.EventHandler(this.вставитиToolStripMenuItem_Click);
             // 
             // видалитиToolStripMenuItem
             // 
             this.видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
             resources.ApplyResources(this.видалитиToolStripMenuItem, "видалитиToolStripMenuItem");
+            this.видалитиToolStripMenuItem.Tag = "DeleteMenu";
             this.видалитиToolStripMenuItem.Click += new System.EventHandler(this.видалитиToolStripMenuItem_Click);
             // 
             // виділитиВсеToolStripMenuItem
             // 
             this.виділитиВсеToolStripMenuItem.Name = "виділитиВсеToolStripMenuItem";
             resources.ApplyResources(this.виділитиВсеToolStripMenuItem, "виділитиВсеToolStripMenuItem");
+            this.виділитиВсеToolStripMenuItem.Tag = "SelectAllMenu";
             this.виділитиВсеToolStripMenuItem.Click += new System.EventHandler(this.виділитиВсеToolStripMenuItem_Click);
             // 
             // вставкаToolStripMenuItem
@@ -187,11 +199,13 @@
             this.зображенняToolStripMenuItem});
             this.вставкаToolStripMenuItem.Name = "вставкаToolStripMenuItem";
             resources.ApplyResources(this.вставкаToolStripMenuItem, "вставкаToolStripMenuItem");
+            this.вставкаToolStripMenuItem.Tag = "InsertMenu";
             // 
             // зображенняToolStripMenuItem
             // 
             this.зображенняToolStripMenuItem.Name = "зображенняToolStripMenuItem";
             resources.ApplyResources(this.зображенняToolStripMenuItem, "зображенняToolStripMenuItem");
+            this.зображенняToolStripMenuItem.Tag = "PictureMenu";
             this.зображенняToolStripMenuItem.Click += new System.EventHandler(this.зображенняToolStripMenuItem_Click);
             // 
             // вікноToolStripMenuItem
@@ -203,23 +217,27 @@
             this.моваToolStripMenuItem});
             this.вікноToolStripMenuItem.Name = "вікноToolStripMenuItem";
             resources.ApplyResources(this.вікноToolStripMenuItem, "вікноToolStripMenuItem");
+            this.вікноToolStripMenuItem.Tag = "WindowMenu";
             // 
             // каскадомToolStripMenuItem
             // 
             this.каскадомToolStripMenuItem.Name = "каскадомToolStripMenuItem";
             resources.ApplyResources(this.каскадомToolStripMenuItem, "каскадомToolStripMenuItem");
+            this.каскадомToolStripMenuItem.Tag = "CascadeMenu";
             this.каскадомToolStripMenuItem.Click += new System.EventHandler(this.каскадомToolStripMenuItem_Click);
             // 
             // плиткоюГоризонтальноToolStripMenuItem
             // 
             this.плиткоюГоризонтальноToolStripMenuItem.Name = "плиткоюГоризонтальноToolStripMenuItem";
             resources.ApplyResources(this.плиткоюГоризонтальноToolStripMenuItem, "плиткоюГоризонтальноToolStripMenuItem");
+            this.плиткоюГоризонтальноToolStripMenuItem.Tag = "TileHorizontal";
             this.плиткоюГоризонтальноToolStripMenuItem.Click += new System.EventHandler(this.плиткоюГоризонтальноToolStripMenuItem_Click);
             // 
             // плиткоюВертикальноToolStripMenuItem
             // 
             this.плиткоюВертикальноToolStripMenuItem.Name = "плиткоюВертикальноToolStripMenuItem";
             resources.ApplyResources(this.плиткоюВертикальноToolStripMenuItem, "плиткоюВертикальноToolStripMenuItem");
+            this.плиткоюВертикальноToolStripMenuItem.Tag = "TileVertical";
             this.плиткоюВертикальноToolStripMenuItem.Click += new System.EventHandler(this.плиткоюВертикальноToolStripMenuItem_Click);
             // 
             // моваToolStripMenuItem
@@ -229,19 +247,20 @@
             this.англійськаToolStripMenuItem});
             this.моваToolStripMenuItem.Name = "моваToolStripMenuItem";
             resources.ApplyResources(this.моваToolStripMenuItem, "моваToolStripMenuItem");
+            this.моваToolStripMenuItem.Tag = "LanguageMenu";
             // 
             // українськаToolStripMenuItem
             // 
-            this.українськаToolStripMenuItem.CheckOnClick = true;
             this.українськаToolStripMenuItem.Name = "українськаToolStripMenuItem";
             resources.ApplyResources(this.українськаToolStripMenuItem, "українськаToolStripMenuItem");
+            this.українськаToolStripMenuItem.Tag = "uk-UA";
             this.українськаToolStripMenuItem.Click += new System.EventHandler(this.українськаToolStripMenuItem_Click);
             // 
             // англійськаToolStripMenuItem
             // 
-            this.англійськаToolStripMenuItem.CheckOnClick = true;
             this.англійськаToolStripMenuItem.Name = "англійськаToolStripMenuItem";
             resources.ApplyResources(this.англійськаToolStripMenuItem, "англійськаToolStripMenuItem");
+            this.англійськаToolStripMenuItem.Tag = "en-US";
             this.англійськаToolStripMenuItem.Click += new System.EventHandler(this.англійськаToolStripMenuItem_Click);
             // 
             // форматToolStripMenuItem
@@ -252,17 +271,20 @@
             this.вирівнятиToolStripMenuItem});
             this.форматToolStripMenuItem.Name = "форматToolStripMenuItem";
             resources.ApplyResources(this.форматToolStripMenuItem, "форматToolStripMenuItem");
+            this.форматToolStripMenuItem.Tag = "FormatMenu";
             // 
             // шрифтToolStripMenuItem
             // 
             this.шрифтToolStripMenuItem.Name = "шрифтToolStripMenuItem";
             resources.ApplyResources(this.шрифтToolStripMenuItem, "шрифтToolStripMenuItem");
+            this.шрифтToolStripMenuItem.Tag = "FontMenu";
             this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.шрифтToolStripMenuItem_Click);
             // 
             // колірТекстуToolStripMenuItem
             // 
             this.колірТекстуToolStripMenuItem.Name = "колірТекстуToolStripMenuItem";
             resources.ApplyResources(this.колірТекстуToolStripMenuItem, "колірТекстуToolStripMenuItem");
+            this.колірТекстуToolStripMenuItem.Tag = "TextColor";
             this.колірТекстуToolStripMenuItem.Click += new System.EventHandler(this.колірТекстуToolStripMenuItem_Click);
             // 
             // вирівнятиToolStripMenuItem
@@ -273,23 +295,27 @@
             this.праворучToolStripMenuItem});
             this.вирівнятиToolStripMenuItem.Name = "вирівнятиToolStripMenuItem";
             resources.ApplyResources(this.вирівнятиToolStripMenuItem, "вирівнятиToolStripMenuItem");
+            this.вирівнятиToolStripMenuItem.Tag = "AlignMenu";
             // 
             // посерединіToolStripMenuItem
             // 
             this.посерединіToolStripMenuItem.Name = "посерединіToolStripMenuItem";
             resources.ApplyResources(this.посерединіToolStripMenuItem, "посерединіToolStripMenuItem");
+            this.посерединіToolStripMenuItem.Tag = "AlignCenter";
             this.посерединіToolStripMenuItem.Click += new System.EventHandler(this.посерединіToolStripMenuItem_Click);
             // 
             // ліворучToolStripMenuItem
             // 
             this.ліворучToolStripMenuItem.Name = "ліворучToolStripMenuItem";
             resources.ApplyResources(this.ліворучToolStripMenuItem, "ліворучToolStripMenuItem");
+            this.ліворучToolStripMenuItem.Tag = "AlignLeft";
             this.ліворучToolStripMenuItem.Click += new System.EventHandler(this.ліворучToolStripMenuItem_Click);
             // 
             // праворучToolStripMenuItem
             // 
             this.праворучToolStripMenuItem.Name = "праворучToolStripMenuItem";
             resources.ApplyResources(this.праворучToolStripMenuItem, "праворучToolStripMenuItem");
+            this.праворучToolStripMenuItem.Tag = "AlignRight";
             this.праворучToolStripMenuItem.Click += new System.EventHandler(this.праворучToolStripMenuItem_Click);
             // 
             // пошукToolStripMenuItem
@@ -298,17 +324,20 @@
             this.знайтиToolStripMenuItem});
             this.пошукToolStripMenuItem.Name = "пошукToolStripMenuItem";
             resources.ApplyResources(this.пошукToolStripMenuItem, "пошукToolStripMenuItem");
+            this.пошукToolStripMenuItem.Tag = "SearchMenu";
             // 
             // знайтиToolStripMenuItem
             // 
             this.знайтиToolStripMenuItem.Name = "знайтиToolStripMenuItem";
             resources.ApplyResources(this.знайтиToolStripMenuItem, "знайтиToolStripMenuItem");
+            this.знайтиToolStripMenuItem.Tag = "GoSearch";
             this.знайтиToolStripMenuItem.Click += new System.EventHandler(this.знайтиToolStripMenuItem_Click);
             // 
             // проПрограмуToolStripMenuItem
             // 
             this.проПрограмуToolStripMenuItem.Name = "проПрограмуToolStripMenuItem";
             resources.ApplyResources(this.проПрограмуToolStripMenuItem, "проПрограмуToolStripMenuItem");
+            this.проПрограмуToolStripMenuItem.Tag = "AboutMenu";
             this.проПрограмуToolStripMenuItem.Click += new System.EventHandler(this.проПрограмуToolStripMenuItem_Click);
             // 
             // openFileDialog1
@@ -372,6 +401,7 @@
             this.tsUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsUndo, "tsUndo");
             this.tsUndo.Name = "tsUndo";
+            this.tsUndo.Tag = "UndoButton";
             this.tsUndo.Click += new System.EventHandler(this.tsUndo_Click);
             // 
             // tsRedo
@@ -379,6 +409,7 @@
             this.tsRedo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsRedo, "tsRedo");
             this.tsRedo.Name = "tsRedo";
+            this.tsRedo.Tag = "RedoButton";
             this.tsRedo.Click += new System.EventHandler(this.tsRedo_Click);
             // 
             // toolStripSeparator1
@@ -391,6 +422,7 @@
             this.tsNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsNew, "tsNew");
             this.tsNew.Name = "tsNew";
+            this.tsNew.Tag = "NewButton";
             this.tsNew.Click += new System.EventHandler(this.tsNew_Click);
             // 
             // tsOpen
@@ -398,6 +430,7 @@
             this.tsOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsOpen, "tsOpen");
             this.tsOpen.Name = "tsOpen";
+            this.tsOpen.Tag = "OpenButton";
             this.tsOpen.Click += new System.EventHandler(this.tsOpen_Click);
             // 
             // tsSave
@@ -405,6 +438,7 @@
             this.tsSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsSave, "tsSave");
             this.tsSave.Name = "tsSave";
+            this.tsSave.Tag = "SaveButton";
             this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
             // 
             // tsCut
@@ -412,6 +446,7 @@
             this.tsCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsCut, "tsCut");
             this.tsCut.Name = "tsCut";
+            this.tsCut.Tag = "CutButton";
             this.tsCut.Click += new System.EventHandler(this.tsCut_Click);
             // 
             // tsCopy
@@ -419,6 +454,7 @@
             this.tsCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsCopy, "tsCopy");
             this.tsCopy.Name = "tsCopy";
+            this.tsCopy.Tag = "CopyButton";
             this.tsCopy.Click += new System.EventHandler(this.tsCopy_Click);
             // 
             // tsPaste
@@ -426,6 +462,7 @@
             this.tsPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsPaste, "tsPaste");
             this.tsPaste.Name = "tsPaste";
+            this.tsPaste.Tag = "PasteButton";
             this.tsPaste.Click += new System.EventHandler(this.tsPaste_Click);
             // 
             // toolStripSeparator2
@@ -438,6 +475,7 @@
             this.tsLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsLeft, "tsLeft");
             this.tsLeft.Name = "tsLeft";
+            this.tsLeft.Tag = "AlignLeftButton";
             this.tsLeft.Click += new System.EventHandler(this.Left_Click);
             // 
             // tsCenter
@@ -445,6 +483,7 @@
             this.tsCenter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsCenter, "tsCenter");
             this.tsCenter.Name = "tsCenter";
+            this.tsCenter.Tag = "AlignCenterButton";
             this.tsCenter.Click += new System.EventHandler(this.Center_Click);
             // 
             // tsRight
@@ -452,6 +491,7 @@
             this.tsRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.tsRight, "tsRight");
             this.tsRight.Name = "tsRight";
+            this.tsRight.Tag = "AlignRightButton";
             this.tsRight.Click += new System.EventHandler(this.Right_Click);
             // 
             // Form1
@@ -464,6 +504,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
