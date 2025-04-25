@@ -58,6 +58,7 @@
             this.посерединіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ліворучToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.праворучToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.виділенняКодуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пошукToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.знайтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -268,7 +269,8 @@
             this.форматToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.шрифтToolStripMenuItem,
             this.колірТекстуToolStripMenuItem,
-            this.вирівнятиToolStripMenuItem});
+            this.вирівнятиToolStripMenuItem,
+            this.виділенняКодуToolStripMenuItem});
             this.форматToolStripMenuItem.Name = "форматToolStripMenuItem";
             resources.ApplyResources(this.форматToolStripMenuItem, "форматToolStripMenuItem");
             this.форматToolStripMenuItem.Tag = "FormatMenu";
@@ -317,6 +319,13 @@
             resources.ApplyResources(this.праворучToolStripMenuItem, "праворучToolStripMenuItem");
             this.праворучToolStripMenuItem.Tag = "AlignRight";
             this.праворучToolStripMenuItem.Click += new System.EventHandler(this.праворучToolStripMenuItem_Click);
+            // 
+            // виділенняКодуToolStripMenuItem
+            // 
+            this.виділенняКодуToolStripMenuItem.CheckOnClick = true;
+            this.виділенняКодуToolStripMenuItem.Name = "виділенняКодуToolStripMenuItem";
+            resources.ApplyResources(this.виділенняКодуToolStripMenuItem, "виділенняКодуToolStripMenuItem");
+            this.виділенняКодуToolStripMenuItem.Click += new System.EventHandler(this.виділенняКодуToolStripMenuItem_Click);
             // 
             // пошукToolStripMenuItem
             // 
@@ -568,6 +577,7 @@
         private System.Windows.Forms.ToolStripMenuItem моваToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem українськаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem англійськаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem виділенняКодуToolStripMenuItem;
     }
 }
 

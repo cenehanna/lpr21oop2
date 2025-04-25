@@ -30,5 +30,23 @@ namespace lpr21oop2
                 }
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://github.com/cenehanna"; 
+            try
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+                ((LinkLabel)sender).LinkVisited = true; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Не вдалося відкрити посилання: {ex.Message}");
+            }
+        }
     }
 }

@@ -10,9 +10,6 @@ namespace lpr21oop2
     public partial class Form1 : Form
     {
 
-
-
-
         public Form1()
         {
 
@@ -203,11 +200,6 @@ namespace lpr21oop2
             Form4 frm = new Form4();
             frm.Show();
         }
-
-
-
-
-
 
 
         private void tsNew_Click(object sender, EventArgs e)
@@ -428,6 +420,40 @@ namespace lpr21oop2
 
             LanguageManager.UpdateFormLanguage(this);
             UpdateMenuLanguageSelection();
+        }
+
+        private void виділенняКодуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            Form2 activeForm = this.ActiveMdiChild as Form2;
+
+            if (activeForm != null)
+            {
+                
+                activeForm.IsSyntaxHighlightingEnabled = !activeForm.IsSyntaxHighlightingEnabled;
+
+                
+                виділенняКодуToolStripMenuItem.Checked = activeForm.IsSyntaxHighlightingEnabled;
+
+               
+                if (activeForm.IsSyntaxHighlightingEnabled)
+                {
+                    activeForm.HighlightSyntax(activeForm.richTextBox1);
+                }
+                else
+                {
+                    
+                    activeForm.richTextBox1.SelectAll();
+                    activeForm.richTextBox1.SelectionColor = activeForm.richTextBox1.ForeColor;
+                    activeForm.richTextBox1.SelectionBackColor = activeForm.richTextBox1.BackColor;
+                    activeForm.richTextBox1.DeselectAll();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Активне вікно не є текстовим редактором.", "Помилка",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

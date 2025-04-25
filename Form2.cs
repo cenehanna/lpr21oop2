@@ -265,79 +265,70 @@ namespace lpr21oop2
         }
 
 
-        private void HighlightSyntax(RichTextBox rtb)
+        public void HighlightSyntax(RichTextBox rtb)
         {
             int selectionStart = rtb.SelectionStart;
             int selectionLength = rtb.SelectionLength;
+            Color originalColor = rtb.SelectionColor;
 
             rtb.SuspendLayout();
+
+            Dictionary<int, Color> originalColors = new Dictionary<int, Color>();
+            for (int i = 0; i < rtb.TextLength; i++)
+            {
+                rtb.Select(i, 1);
+                originalColors[i] = rtb.SelectionColor;
+            }
 
             rtb.SelectAll();
             rtb.SelectionColor = Color.Black;
 
-            string[] keywords = {
+            HighlightMatches(rtb, @"//.*?$", Color.Green); 
+            HighlightMatches(rtb, "\".*?\"", Color.Brown); 
+
+            string[] keywords ={
         "if", "else", "while", "for", "foreach", "return", "break", "continue",
         "switch", "case", "default", "do", "try", "catch", "finally", "throw",
         "public", "private", "protected", "internal", "static", "void", "new", "class", "namespace",
         "using", "this", "base", "override", "virtual", "abstract", "sealed", "readonly", "const"
     };
-
-            string[] types = {
+            string[] types ={
         "int", "string", "bool", "float", "double", "decimal", "char", "object", "var", "long", "short"
     };
-
             string[] literals = { "true", "false", "null" };
 
-            MatchCollection comments = Regex.Matches(rtb.Text, @"//.*?$", RegexOptions.Multiline);
-            foreach (Match match in comments)
-            {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = Color.Green;
-            }
+            foreach (var word in keywords)
+                HighlightWord(rtb, word, Color.Blue);
+            foreach (var type in types)
+                HighlightWord(rtb, type, Color.DarkCyan);
+            foreach (var literal in literals)
+                HighlightWord(rtb, literal, Color.Purple);
 
-            MatchCollection strings = Regex.Matches(rtb.Text, "\".*?\"");
-            foreach (Match match in strings)
-            {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = Color.Brown;
-            }
-
-            foreach (string keyword in keywords)
-            {
-                MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{keyword}\b");
-                foreach (Match match in matches)
-                {
-                    rtb.Select(match.Index, match.Length);
-                    rtb.SelectionColor = Color.Blue;
-                }
-            }
-
-            foreach (string type in types)
-            {
-                MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{type}\b");
-                foreach (Match match in matches)
-                {
-                    rtb.Select(match.Index, match.Length);
-                    rtb.SelectionColor = Color.DarkCyan;
-                }
-            }
-
-            foreach (string literal in literals)
-            {
-                MatchCollection matches = Regex.Matches(rtb.Text, $@"\b{literal}\b");
-                foreach (Match match in matches)
-                {
-                    rtb.Select(match.Index, match.Length);
-                    rtb.SelectionColor = Color.Purple;
-                }
-            }
-
+          
             rtb.Select(selectionStart, selectionLength);
-            rtb.SelectionColor = Color.Black;
+            rtb.SelectionColor = originalColor;
 
             rtb.ResumeLayout();
         }
 
+        private void HighlightMatches(RichTextBox rtb, string pattern, Color color)
+        {
+            foreach (Match match in Regex.Matches(rtb.Text, pattern, RegexOptions.Multiline))
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = color;
+            }
+        }
+
+        private void HighlightWord(RichTextBox rtb, string word, Color color)
+        {
+            foreach (Match match in Regex.Matches(rtb.Text, $@"\b{word}\b"))
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = color;
+            }
+        }
+        public bool IsSyntaxHighlightingEnabled { get; set; } = true; 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             if (!isUndoRedoOperation)
@@ -351,7 +342,10 @@ namespace lpr21oop2
 
             sbAmount.Text = "Кількість символів: " + richTextBox1.Text.Length.ToString();
 
-            HighlightSyntax(richTextBox1);
+            if (IsSyntaxHighlightingEnabled)
+            {
+                HighlightSyntax(richTextBox1);
+            }
         }
         public void Undo()
         {

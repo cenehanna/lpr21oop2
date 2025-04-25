@@ -121,6 +121,198 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="новийToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="новийToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Новий</value>
+  </data>
+  <data name="відкритиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="відкритиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Відкрити</value>
+  </data>
+  <data name="зберегтиЯкToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="зберегтиЯкToolStripMenuItem.Text" xml:space="preserve">
+    <value>Зберегти як</value>
+  </data>
+  <data name="зберегтиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="зберегтиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вихід</value>
+  </data>
+  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="вирізатиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="вирізатиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вирізати</value>
+  </data>
+  <data name="копіюватиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="копіюватиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="вставитиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="вставитиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставити</value>
+  </data>
+  <data name="видалитиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="видалитиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="виділитиВсеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="виділитиВсеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Виділити все</value>
+  </data>
+  <data name="редагуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <data name="редагуванняToolStripMenuItem.Text" xml:space="preserve">
+    <value>Редагування</value>
+  </data>
+  <data name="зображенняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="зображенняToolStripMenuItem.Text" xml:space="preserve">
+    <value>Зображення</value>
+  </data>
+  <data name="вставкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="вставкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставка</value>
+  </data>
+  <data name="каскадомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 26</value>
+  </data>
+  <data name="каскадомToolStripMenuItem.Text" xml:space="preserve">
+    <value>Каскадом</value>
+  </data>
+  <data name="плиткоюГоризонтальноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 26</value>
+  </data>
+  <data name="плиткоюГоризонтальноToolStripMenuItem.Text" xml:space="preserve">
+    <value>Плиткою горизонтально</value>
+  </data>
+  <data name="плиткоюВертикальноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 26</value>
+  </data>
+  <data name="плиткоюВертикальноToolStripMenuItem.Text" xml:space="preserve">
+    <value>Плиткою вертикально</value>
+  </data>
+  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 26</value>
+  </data>
+  <data name="українськаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="англійськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 26</value>
+  </data>
+  <data name="англійськаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Англійська</value>
+  </data>
+  <data name="моваToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 26</value>
+  </data>
+  <data name="моваToolStripMenuItem.Text" xml:space="preserve">
+    <value>Мова</value>
+  </data>
+  <data name="вікноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="вікноToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вікно</value>
+  </data>
+  <data name="шрифтToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="шрифтToolStripMenuItem.Text" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="колірТекстуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="колірТекстуToolStripMenuItem.Text" xml:space="preserve">
+    <value>Колір тексту</value>
+  </data>
+  <data name="посерединіToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="посерединіToolStripMenuItem.Text" xml:space="preserve">
+    <value>По центру</value>
+  </data>
+  <data name="ліворучToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="ліворучToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ліворуч</value>
+  </data>
+  <data name="праворучToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="праворучToolStripMenuItem.Text" xml:space="preserve">
+    <value>Праворуч</value>
+  </data>
+  <data name="вирівнятиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="вирівнятиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вирівняти</value>
+  </data>
+  <data name="виділенняКодуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="виділенняКодуToolStripMenuItem.Text" xml:space="preserve">
+    <value>Виділення коду</value>
+  </data>
+  <data name="форматToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 24</value>
+  </data>
+  <data name="форматToolStripMenuItem.Text" xml:space="preserve">
+    <value>Формат</value>
+  </data>
+  <data name="знайтиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="знайтиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="пошукToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
+  </data>
+  <data name="пошукToolStripMenuItem.Text" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="проПрограмуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 24</value>
+  </data>
+  <data name="проПрограмуToolStripMenuItem.Text" xml:space="preserve">
+    <value>Про програму</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -142,192 +334,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 24</value>
-  </data>
-  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
-  </data>
-  <data name="новийToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="новийToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Новий</value>
-  </data>
-  <data name="відкритиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="відкритиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Відкрити</value>
-  </data>
-  <data name="зберегтиЯкToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="зберегтиЯкToolStripMenuItem.Text" xml:space="preserve">
-    <value>Зберегти як</value>
-  </data>
-  <data name="зберегтиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="зберегтиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Зберегти</value>
-  </data>
-  <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вихід</value>
-  </data>
-  <data name="редагуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 24</value>
-  </data>
-  <data name="редагуванняToolStripMenuItem.Text" xml:space="preserve">
-    <value>Редагування</value>
-  </data>
-  <data name="вирізатиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="вирізатиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вирізати</value>
-  </data>
-  <data name="копіюватиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="копіюватиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Копіювати</value>
-  </data>
-  <data name="вставитиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="вставитиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставити</value>
-  </data>
-  <data name="видалитиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="видалитиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="виділитиВсеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="виділитиВсеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Виділити все</value>
-  </data>
-  <data name="вставкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
-  </data>
-  <data name="вставкаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставка</value>
-  </data>
-  <data name="зображенняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="зображенняToolStripMenuItem.Text" xml:space="preserve">
-    <value>Зображення</value>
-  </data>
-  <data name="вікноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 24</value>
-  </data>
-  <data name="вікноToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вікно</value>
-  </data>
-  <data name="каскадомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 26</value>
-  </data>
-  <data name="каскадомToolStripMenuItem.Text" xml:space="preserve">
-    <value>Каскадом</value>
-  </data>
-  <data name="плиткоюГоризонтальноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 26</value>
-  </data>
-  <data name="плиткоюГоризонтальноToolStripMenuItem.Text" xml:space="preserve">
-    <value>Плиткою горизонтально</value>
-  </data>
-  <data name="плиткоюВертикальноToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 26</value>
-  </data>
-  <data name="плиткоюВертикальноToolStripMenuItem.Text" xml:space="preserve">
-    <value>Плиткою вертикально</value>
-  </data>
-  <data name="моваToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 26</value>
-  </data>
-  <data name="моваToolStripMenuItem.Text" xml:space="preserve">
-    <value>Мова</value>
-  </data>
-  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="українськаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Українська</value>
-  </data>
-  <data name="англійськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="англійськаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Англійська</value>
-  </data>
-  <data name="форматToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 24</value>
-  </data>
-  <data name="форматToolStripMenuItem.Text" xml:space="preserve">
-    <value>Формат</value>
-  </data>
-  <data name="шрифтToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="шрифтToolStripMenuItem.Text" xml:space="preserve">
-    <value>Шрифт</value>
-  </data>
-  <data name="колірТекстуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="колірТекстуToolStripMenuItem.Text" xml:space="preserve">
-    <value>Колір тексту</value>
-  </data>
-  <data name="вирівнятиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="вирівнятиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вирівняти</value>
-  </data>
-  <data name="посерединіToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="посерединіToolStripMenuItem.Text" xml:space="preserve">
-    <value>По центру</value>
-  </data>
-  <data name="ліворучToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="ліворучToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ліворуч</value>
-  </data>
-  <data name="праворучToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="праворучToolStripMenuItem.Text" xml:space="preserve">
-    <value>Праворуч</value>
-  </data>
-  <data name="пошукToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
-  <data name="пошукToolStripMenuItem.Text" xml:space="preserve">
-    <value>Пошук</value>
-  </data>
-  <data name="знайтиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="знайтиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Знайти</value>
-  </data>
-  <data name="проПрограмуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 24</value>
-  </data>
-  <data name="проПрограмуToolStripMenuItem.Text" xml:space="preserve">
-    <value>Про програму</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>153, 17</value>
@@ -392,27 +398,6 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>449, 17</value>
   </metadata>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
-  </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1085, 27</value>
-  </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tsUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -2975,6 +2960,27 @@
   <data name="tsRight.Text" xml:space="preserve">
     <value>Вирівняти по правому краю</value>
   </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1085, 27</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3321,6 +3327,12 @@
     <value>праворучToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;праворучToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;виділенняКодуToolStripMenuItem.Name" xml:space="preserve">
+    <value>виділенняКодуToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;виділенняКодуToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;пошукToolStripMenuItem.Name" xml:space="preserve">

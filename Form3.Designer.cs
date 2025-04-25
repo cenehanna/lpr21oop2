@@ -134,10 +134,10 @@
 
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Button Prev;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
